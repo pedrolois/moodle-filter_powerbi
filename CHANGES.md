@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0 (2026-11-11)
+
+- First stable release.
+
 ## 0.2.2 (2026-11-11)
 
 - Report height set with a CSS variable, so the full screen view needs no `!important`.
