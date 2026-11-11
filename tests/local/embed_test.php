@@ -21,6 +21,7 @@ namespace filter_powerbi\local;
  *
  * @package   filter_powerbi
  * @category  test
+ * @covers    \filter_powerbi\local\embed
  * @copyright 2026 Pedro Lois {@link https://github.com/pedrolois}
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
