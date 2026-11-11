@@ -49,6 +49,8 @@ final class embed_test extends \advanced_testcase {
 
     /**
      * The report address and the secure embed address are both read; other links are not.
+     *
+     * @covers \filter_powerbi\local\embed
      */
     public function test_from_url(): void {
         $embed = embed::from_url($this->link('&mdlheight=480&mdlmode=embedded&mdlnav=0&mdlfilters=1'));
@@ -72,6 +74,8 @@ final class embed_test extends \advanced_testcase {
 
     /**
      * Display options are kept within safe limits; unknown values fall back to the defaults.
+     *
+     * @covers \filter_powerbi\local\embed
      */
     public function test_from_url_limits(): void {
         $embed = embed::from_url($this->link('&mdlheight=99999&mdlmode=evil&mdlfilter=evil&mdltable=T&mdlcolumn=C'));
@@ -89,6 +93,8 @@ final class embed_test extends \advanced_testcase {
 
     /**
      * Names are escaped the way Power BI URL filters need.
+     *
+     * @covers \filter_powerbi\local\embed
      */
     public function test_escape_name(): void {
         $this->assertSame('Course_x0020_Info', embed::escape_name('Course Info'));
@@ -98,6 +104,8 @@ final class embed_test extends \advanced_testcase {
 
     /**
      * The secure embed address carries the report, page, panes and the filter by course.
+     *
+     * @covers \filter_powerbi\local\embed
      */
     public function test_secure_url_filtered_by_course(): void {
         $this->resetAfterTest();
@@ -118,6 +126,8 @@ final class embed_test extends \advanced_testcase {
 
     /**
      * Each kind of filter works out the viewer's values on the server.
+     *
+     * @covers \filter_powerbi\local\embed
      */
     public function test_get_filter_values(): void {
         global $CFG;
@@ -163,6 +173,8 @@ final class embed_test extends \advanced_testcase {
 
     /**
      * Several values become an "in" filter; no value filters by an empty value.
+     *
+     * @covers \filter_powerbi\local\embed
      */
     public function test_secure_url_several_values(): void {
         $this->resetAfterTest();
@@ -186,6 +198,8 @@ final class embed_test extends \advanced_testcase {
 
     /**
      * A reference is accepted only with its signature and in the context it was made for.
+     *
+     * @covers \filter_powerbi\local\embed
      */
     public function test_reference(): void {
         $this->resetAfterTest();
@@ -218,6 +232,8 @@ final class embed_test extends \advanced_testcase {
 
     /**
      * The editor is offered the fixed filters plus every custom profile field.
+     *
+     * @covers \filter_powerbi\local\embed
      */
     public function test_get_filter_options(): void {
         $this->resetAfterTest();

@@ -44,6 +44,8 @@ final class text_filter_test extends \advanced_testcase {
 
     /**
      * A marked link becomes a secure embed, and replaces its paragraph; other links are left alone.
+     *
+     * @covers \filter_powerbi\text_filter
      */
     public function test_secure_embed(): void {
         $this->resetAfterTest();
@@ -63,6 +65,8 @@ final class text_filter_test extends \advanced_testcase {
 
     /**
      * Text without marked links is returned as it is.
+     *
+     * @covers \filter_powerbi\text_filter
      */
     public function test_nothing_to_do(): void {
         $this->resetAfterTest();
@@ -72,6 +76,8 @@ final class text_filter_test extends \advanced_testcase {
 
     /**
      * The embedded mode without an app registration explains what is missing; with one, it writes a signed reference.
+     *
+     * @covers \filter_powerbi\text_filter
      */
     public function test_embedded(): void {
         $this->resetAfterTest();

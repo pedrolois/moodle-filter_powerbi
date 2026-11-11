@@ -65,6 +65,8 @@ final class api_test extends \advanced_testcase {
 
     /**
      * Not configured: no request is made.
+     *
+     * @covers \filter_powerbi\local\api
      */
     public function test_not_configured(): void {
         $this->resetAfterTest();
@@ -75,6 +77,8 @@ final class api_test extends \advanced_testcase {
 
     /**
      * The access token is asked for once and then cached.
+     *
+     * @covers \filter_powerbi\local\api
      */
     public function test_access_token_cached(): void {
         $this->resetAfterTest();
@@ -96,6 +100,8 @@ final class api_test extends \advanced_testcase {
 
     /**
      * The embed token carries the viewer's identity only with a row-level security role.
+     *
+     * @covers \filter_powerbi\local\api
      */
     public function test_generate_token(): void {
         $this->resetAfterTest();
@@ -122,6 +128,8 @@ final class api_test extends \advanced_testcase {
 
     /**
      * Errors from Microsoft become readable messages.
+     *
+     * @covers \filter_powerbi\local\api
      */
     public function test_errors(): void {
         $this->resetAfterTest();
@@ -135,6 +143,8 @@ final class api_test extends \advanced_testcase {
 
     /**
      * A server without trusted certificates gets advice instead of a cURL error.
+     *
+     * @covers \filter_powerbi\local\api
      */
     public function test_certificate_error(): void {
         $this->resetAfterTest();
@@ -147,6 +157,8 @@ final class api_test extends \advanced_testcase {
 
     /**
      * The connection check lists workspaces with their reports.
+     *
+     * @covers \filter_powerbi\local\api
      */
     public function test_check_connection(): void {
         $this->resetAfterTest();

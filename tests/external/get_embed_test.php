@@ -50,6 +50,8 @@ final class get_embed_test extends \advanced_testcase {
 
     /**
      * A signed report in a course the student is in: token, filter values and language come back.
+     *
+     * @covers \filter_powerbi\external\get_embed
      */
     public function test_execute(): void {
         $this->resetAfterTest();
@@ -72,6 +74,8 @@ final class get_embed_test extends \advanced_testcase {
 
     /**
      * A reference that was not signed by the site, or used in another context, is refused.
+     *
+     * @covers \filter_powerbi\external\get_embed
      */
     public function test_refused(): void {
         $this->resetAfterTest();
@@ -87,6 +91,8 @@ final class get_embed_test extends \advanced_testcase {
 
     /**
      * Moodle languages become Power BI locales.
+     *
+     * @covers \filter_powerbi\external\get_embed
      */
     public function test_get_locale(): void {
         $this->assertSame('es', get_embed::get_locale('es'));
