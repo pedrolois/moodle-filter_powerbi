@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<libraries>
+  <library>
+    <location>amd/src/powerbi_client.js</location>
+    <name>Power BI JavaScript client (powerbi-client)</name>
+    <description>Embeds Power BI reports with embed tokens.</description>
+    <version>2.25.0</version>
+    <license>MIT</license>
+    <repository>https://github.com/microsoft/PowerBI-JavaScript</repository>
+    <copyrights>
+      <copyright>Microsoft Corporation</copyright>
+    </copyrights>
+  </library>
+  <library>
+    <location>amd/build/powerbi_client.min.js</location>
+    <name>Power BI JavaScript client (powerbi-client), minified</name>
+    <version>2.25.0</version>
+    <license>MIT</license>
+    <repository>https://github.com/microsoft/PowerBI-JavaScript</repository>
+    <copyrights>
+      <copyright>Microsoft Corporation</copyright>
+    </copyrights>
+  </library>
+</libraries>
